@@ -13,3 +13,7 @@ $ npm start
 
 Open http://localhost:3333/ in your browser
 
+
+##Screen
+
+![alt text](screen/image_editor.png)
