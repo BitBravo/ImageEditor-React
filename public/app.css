@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, system, sans-serif; }
+
+body {
+  background: #eee;
+  margin: 0; }
+
+.Container {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  min-width: 1024px; }
+
+.Sidebar {
+  -ms-flex: 0 0 220px;
+      flex: 0 0 220px;
+  margin: 0 15px;
+  padding-top: 15px; }
+
+.Main {
+  -ms-flex: 0 0 530px;
+      flex: 0 0 530px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-bottom: none; }
+  .Main-subtitle {
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 19px;
+    color: #aaa;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 13px; }
+
+.Card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 6px 10px;
+  margin-bottom: 10px; }
+  .Card:last-child {
+    margin-bottom: 0; }
+  .Card-header {
+    padding: 4px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #eee;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+    .Card-header h4 {
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      color: #aaa;
+      font-weight: 400; }
+
+.Button {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 8px;
+  border-radius: 25px;
+  font-size: 18px;
+  line-height: 34px;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #006fe6; }
+  .Button:hover {
+    background-color: #3395ff; }
+
+.ImageCanvas {
+  position: relative; }
+  .ImageCanvas canvas {
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px; }
+
+.SearchBar {
+  padding: 4px 10px;
+  display: block;
+  width: 100%;
+  margin: 4px 0;
+  border: none;
+  font-size: 13px;
+  outline: none;
+  margin-top: -4px; }
+
+.ImagePicker {
+  overflow-y: scroll;
+  height: calc(100vh - 74px - 32px);
+  padding-top: 4px; }
+  .ImagePicker-image {
+    cursor: pointer;
+    padding: 4px 8px;
+    position: relative; }
+    .ImagePicker-image:last-child {
+      margin-bottom: 0; }
+    .ImagePicker-image img {
+      max-width: 100%;
+      display: block;
+      opacity: 1;
+      transition: 5s ease-in-out all; }
+    .ImagePicker-image .OptionWrapper--selected img {
+      opacity: 0.8; }
+
+.SizePicker {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .SizePicker-size {
+    height: 50px;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    cursor: pointer; }
+    .SizePicker-size--tall {
+      -ms-flex: 0 0 35px;
+          flex: 0 0 35px; }
+    .SizePicker-size--square {
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px; }
+    .SizePicker-size--wide {
+      -ms-flex: 0 0 90px;
+          flex: 0 0 90px; }
+    .SizePicker-size .OptionWrapper {
+      padding-top: 20px; }
+
+.Credit {
+  padding-top: 25px;
+  color: #555;
+  font-size: 14px; }
+  .Credit a, .Credit a:visited {
+    color: #555;
+    font-weight: 400; }
+  .Credit a:hover {
+    color: #333; }
+
+.FiltersPicker {
+  width: 100%;
+  font-size: 16px; }
+
+.TextPropsPicker p {
+  margin: 6px 0; }
+  .TextPropsPicker p select {
+    margin-left: 10px;
+    font-size: 16px; }
+
+.TextPropsPicker-colors {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+.TextPropsPicker-color {
+  -ms-flex: 0 0 30px;
+      flex: 0 0 30px;
+  height: 30px;
+  cursor: pointer; }
+
+.TextPropsPicker-style {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin: 10px 0 16px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+.TextPropsPicker-style-bold, .TextPropsPicker-style-italic {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  cursor: pointer;
+  text-align: center; }
+  .TextPropsPicker-style-bold span, .TextPropsPicker-style-italic span {
+    font-size: 13px;
+    line-height: 30px; }
+  .TextPropsPicker-style-bold:first-child, .TextPropsPicker-style-italic:first-child {
+    margin-right: 10px; }
+
+.TextPropsPicker-style-bold span {
+  font-weight: bold; }
+
+.TextPropsPicker-style-italic span {
+  font-style: italic; }
+
+.OptionWrapper {
+  border-radius: 3px;
+  border: 1px solid #eee;
+  transition: 0.5s ease-in-out border;
+  position: relative; }
+  .OptionWrapper--border-thin-grey {
+    border: 1px solid #eee; }
+  .OptionWrapper--border-thick-transparent {
+    border: 2px solid transparent;
+    border-radius: none; }
+  .OptionWrapper, .OptionWrapper-w, .OptionWrapper-w > * {
+    width: 100%;
+    height: 100%; }
+  .OptionWrapper--size-normal .OptionWrapper-w:before {
+    height: 20px;
+    width: 20px;
+    top: -10px;
+    right: -10px;
+    font-size: 12px;
+    line-height: 20px; }
+  .OptionWrapper--size-small .OptionWrapper-w:before {
+    height: 14px;
+    width: 14px;
+    top: -7px;
+    right: -7px;
+    font-size: 8px;
+    line-height: 14px; }
+  .OptionWrapper-w:before {
+    display: block;
+    background: #007bff;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: absolute;
+    content: "\2713";
+    color: #fff;
+    z-index: 9;
+    text-align: center;
+    transition: 0.5s ease-in-out opacity;
+    opacity: 0; }
+  .OptionWrapper--selected {
+    border-color: #007bff; }
+    .OptionWrapper--selected .OptionWrapper-w:before {
+      opacity: 1; }
+
+.Spinner:before,
+.Spinner:after,
+.Spinner {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  animation-fill-mode: both;
+  animation: load7 1.8s infinite ease-in-out; }
+
+.Spinner {
+  color: #666;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  transform: translateZ(0);
+  animation-delay: -0.16s; }
+
+.Spinner:before {
+  left: -3.5em;
+  animation-delay: -0.32s; }
+
+.Spinner:after {
+  left: 3.5em; }
+
+.Spinner:before,
+.Spinner:after {
+  content: '';
+  position: absolute;
+  top: 0; }
+
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em; }
+  40% {
+    box-shadow: 0 2.5em 0 0; } }
+
+
+/*# sourceMappingURL=app.css.map*/
