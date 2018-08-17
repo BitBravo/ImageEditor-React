@@ -25,3 +25,8 @@ export default function* rootSaga() {
   yield fork(takeEvery, 'SEARCH_IMAGES', searchImagesSaga);
   yield fork(takeEvery, 'RESET_SEARCH', getPopularImagesSaga);
 }
+// export default function* rootSaga() {
+//   yield fork(initImagesSaga);
+//   yield fork(takeEvery, 'SEARCH_IMAGES', searchImagesSaga);
+//   yield fork(takeEvery, 'RESET_SEARCH', getPopularImagesSaga);
+// }
